@@ -6,7 +6,9 @@
 
 ## 下载
 
-主题包 71.18 MB，从 Release 下载：**[卡通IP形象主题 v1.0 · 可可小熊](https://github.com/kahao-git/cocoa-bear-theme/releases/tag/v1.0)** → 附件 `cocoa-bear-theme-v1.0.mtz`（71.18 MB）
+主题包 71.41 MB，从 Release 下载：**[卡通IP形象主题 v1.0.1 · 9-patch 修复](https://github.com/kahao-git/cocoa-bear-theme/releases/tag/v1.0.1)** → 附件 `cocoa-bear-theme-v1.0.1.mtz`
+
+> 请务必用 v1.0.1。v1.0 包内 `dialerpad_background.9`、`message_bubble_out_thumbnail_last_bg_n.9`、`l46pevdo_bg.9` 三张图的 1px 边框不合规，导入时会被 9-Patch Errors 校验拦下。
 
 安装：把 .mtz 放到手机存储任意目录，打开「主题壁纸 → 我的 → 从本地导入」，选中该文件即可应用。
 
@@ -33,7 +35,7 @@
 
 | 系统 | 当前版本 | 本地包 | 直接复制文案 |
 | --- | --- | --- | --- |
-| OS3 | 1.0 | [cocoa-bear-theme-v1.0.mtz](https://github.com/kahao-git/cocoa-bear-theme/releases/download/v1.0/cocoa-bear-theme-v1.0.mtz)（71.18 MB） | SUBMISSION_OS3.txt |
+| OS3 | 1.0.1 | [cocoa-bear-theme-v1.0.1.mtz](https://github.com/kahao-git/cocoa-bear-theme/releases/download/v1.0.1/cocoa-bear-theme-v1.0.1.mtz)（71.41 MB） | SUBMISSION_OS3.txt |
 
 ## 内容清单
 
@@ -65,6 +67,7 @@
 
 - 图标：54 枚全部为 512×512 透明 PNG，命名与包名一一对应，已核验计数。
 - 9-patch：气泡、输入栏、卡片、面板共 28 项按目标模块重新生成，左/上伸区与右/下内容区标记齐备；气泡尾巴与缝线完整，白底与阴影已透明化。
+- 9-patch 合规（1.0.1 补充）：工程内 45 张 .9.png 逐张核对 1px 边框 —— 四角全透明、边框像素只能是纯黑标记或全透明，四个边各有一处连续标记。修复了 3 张边框被覆盖操作冲掉的图，其余 42 张原本合规。
 - 锁屏：manifest / main / origin 三份一致，XML 通过解析校验；天气列名与 content provider 一致。
 - 小组件：manifest 与 widget_layout.json 的 canonicalXML 逐份比对一致。
 - 主题配色：7 个模块 theme_values 全量替换旧棕色阶到新奶油色阶，浅底文字改为深可可。
@@ -73,3 +76,4 @@
 ## 变更记录
 
 - 2026-11-22：首发版本 1.0，完成素材、模块替换、锁屏与小组件重写、打包与预览图。
+- 2026-11-22：1.0.1 修复导入时的 9-Patch Errors（dialerpad_background / message_bubble_out_thumbnail_last_bg_n / lockscreen l46pevdo_bg 三张边框不合规），重打包。
