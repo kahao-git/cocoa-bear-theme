@@ -6,7 +6,7 @@
 
 ## 下载
 
-主题包 71.18 MB，从 Release 下载：**[卡通IP形象主题 v1.0 · 可可小熊](https://github.com/kahao-git/cocoa-bear-theme/releases/tag/v1.0)** → 附件 `卡通IP形象主题.mtz`
+主题包 71.18 MB，从 Release 下载：**[卡通IP形象主题 v1.0 · 可可小熊](https://github.com/kahao-git/cocoa-bear-theme/releases/tag/v1.0)** → 附件 `cocoa-bear-theme-v1.0.mtz`（71.18 MB）
 
 安装：把 .mtz 放到手机存储任意目录，打开「主题壁纸 → 我的 → 从本地导入」，选中该文件即可应用。
 
@@ -33,7 +33,7 @@
 
 | 系统 | 当前版本 | 本地包 | 直接复制文案 |
 | --- | --- | --- | --- |
-| OS3 | 1.0 | 卡通IP形象主题.mtz（71 MB） | SUBMISSION_OS3.txt |
+| OS3 | 1.0 | [cocoa-bear-theme-v1.0.mtz](https://github.com/kahao-git/cocoa-bear-theme/releases/download/v1.0/cocoa-bear-theme-v1.0.mtz)（71.18 MB） | SUBMISSION_OS3.txt |
 
 ## 内容清单
 
