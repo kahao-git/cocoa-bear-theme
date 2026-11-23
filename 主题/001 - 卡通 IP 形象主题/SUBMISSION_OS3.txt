@@ -1,0 +1,40 @@
+卡通IP形象主题（Kakao Bear Cream Autumn Theme）
+===============================
+
+交付版本：1.0.1（修复 9-patch 边框校验）
+适用系统：HyperOS 3（OS3）海外版 Global
+适配机型：Xiaomi 15 Ultra（1080×2400，xxhdpi）
+
+一、主题信息
+- 主题名：卡通IP形象主题
+- 原创 IP：可可小熊（Cocoa Bear）
+- 风格：ins 可爱风，秋季奶油暖色，毛绒布艺质感
+- 主色：奶油白 #FFFBF2 / 米白 #FFF6E6 / 奶油黄 #FFE8B8 / 玉米黄 #FFCB5C
+- 辅色：焦糖 #C5854B（缝线、强调）、可可棕 #6B4A33（次级文字）、深可可 #3E2A1D（主文字）
+
+二、包含内容
+1. 壁纸：桌面、锁屏各 1 张，1080×2400
+2. 锁屏：MAML 动态锁屏，含时间、日期、天气卡（描述/AQI/城市/温度/温差）、手电筒开关、相机快捷、上滑解锁、双枫叶飘动
+3. 图标：54 枚 512×512 透明 PNG，按 Android 包名命名
+4. 小组件：clock_2x2 / clock_2x4 / clock_3x4 / clock_4x2 四种尺寸的天气时钟
+5. 短信：收发气泡、输入栏、会话顶栏、附件页、收件人列表等 9-patch 与位图
+6. 通讯录：拨号盘背景、顶栏、底部导航、弹窗、联系人条目
+7. 设置：设置窗口、偏好卡片组、搜索框
+8. 系统界面：通知卡片、全屏下拉面板背景、状态栏与控件配色
+9. 桌面：搜索栏样式、桌面配色
+
+三、安装
+1. 将 卡通IP形象主题.mtz（Release 附件名 cocoa-bear-theme-v1.0.1.mtz）拷入手机存储；
+2. 打开「主题壁纸」→ 我的 → 主题 → 从本地导入；
+3. 应用后如需完整锁屏效果，请在「设置 → 锁屏」启用动态锁屏。
+
+四、注意事项
+- 天气卡依赖系统天气服务 content://weather/actualWeatherData/1，首次应用后需联网刷新一次；
+- 手电筒开关依赖 torch_state 全局设置，部分机型首次点击可能延迟 1 秒；
+- 图标仅覆盖清单内 54 个应用，未覆盖应用使用系统默认图标。
+
+五、校验
+- description.xml：title=卡通IP形象主题，uiVersion=17，editorVersion=2.0.8，miuiAdapterVersion=3.3
+- 模块版本：contacts/mms/settings/systemui/home/notification/securitycenter/framework-res 均为 0.0.2
+- 打包条目：19（15 模块 + description.xml + wallpaper 目录 + 2 壁纸）
+- 9-patch：45 张 .9.png 逐张校验，四角透明、边框仅纯黑标记或全透明，四个边各一处连续标记，全部通过

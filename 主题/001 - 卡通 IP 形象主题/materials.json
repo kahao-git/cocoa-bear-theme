@@ -1,0 +1,81 @@
+{
+  "theme": "卡通IP形象主题",
+  "delivery": "001-卡通IP形象主题",
+  "files": [
+    {
+      "name": "卡通IP形象主题.mtz",
+      "type": "theme-package",
+      "size_mb": 71.2,
+      "note": "HyperOS 3 Global 主题包"
+    },
+    {
+      "name": "封面.jpg",
+      "type": "cover",
+      "size": "1200×800"
+    },
+    {
+      "name": "01-lockscreen.jpg",
+      "type": "preview",
+      "size": "1080×2400"
+    },
+    {
+      "name": "02-home.jpg",
+      "type": "preview",
+      "size": "1080×2400"
+    },
+    {
+      "name": "03-messages.jpg",
+      "type": "preview",
+      "size": "1080×2400"
+    },
+    {
+      "name": "04-settings.jpg",
+      "type": "preview",
+      "size": "1080×2400"
+    },
+    {
+      "name": "05-icons.jpg",
+      "type": "preview",
+      "size": "1080×2400"
+    },
+    {
+      "name": "SUBMISSION_OS3.txt",
+      "type": "submission-text"
+    },
+    {
+      "name": "checks.json",
+      "type": "checks"
+    },
+    {
+      "name": "materials.json",
+      "type": "manifest"
+    }
+  ],
+  "palette": {
+    "cream_white": "#FFFBF2",
+    "off_white": "#FFF6E6",
+    "cream_yellow": "#FFE8B8",
+    "corn_yellow": "#FFCB5C",
+    "caramel": "#C5854B",
+    "cocoa": "#6B4A33",
+    "deep_cocoa": "#3E2A1D"
+  },
+  "modules": [
+    "clock_2x2",
+    "clock_2x4",
+    "clock_3x4",
+    "clock_4x2",
+    "com.android.contacts",
+    "com.android.mms",
+    "com.android.settings",
+    "com.android.systemui",
+    "com.miui.fliphome",
+    "com.miui.home",
+    "framework-miui-res",
+    "framework-res",
+    "icons",
+    "lockscreen",
+    "miui.systemui.plugin",
+    "wallpaper"
+  ]
+}
