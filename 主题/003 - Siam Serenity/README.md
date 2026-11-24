@@ -39,7 +39,7 @@ Local package: `Siam Serenity.mtz` in this folder. Import through Theme Store �
 | 6 | Weather / time / date | Live `ContentProviderBinder` on `content://weather/actualWeatherData/1` (city, description, temperature, low/high, AQI); clock and calendar use MAML `DateTime` with English formats |
 | 7 | Lock screen widgets | Weather card and calendar card, both tappable — weather opens `com.miui.weather2`, calendar opens `com.xiaomi.calendar` |
 | 8 | Unlock animation | Drag displacement on the whole scene, layered fade, fronds and mist lift faster than the type, hint text fades out with the swipe |
-| 9 | Icons | 53 store-spec icons (31 system + 10 overseas + 12 Google), 86 package names covered, 512 × 512, 256-colour quantised; flat vector glyphs on a shared sunset-to-turquoise gradient plate with a cream inner stroke |
+| 9 | Icons | 53 store-spec icons (31 system + 10 overseas + 12 Google), 87 package names covered, 512 × 512, 256-colour quantised; flat vector glyphs on a shared sunset-to-turquoise gradient plate with a cream inner stroke |
 | 10 | System UI | Contacts, dialer, messages, settings, notification shade, quick settings, launcher and framework colour maps rebuilt around the Siam palette; native dialog and window backgrounds left untouched |
 | 11 | SMS bubbles | Outgoing: coral → amber → turquoise gradient, 9-patch with 66 px radius; incoming: warm cream at 94%; composer: cream capsule; all three keep the original stretch markers |
 | 12 | Control centre | Full-height deep-teal shade with a soft turquoise lift and tide arcs at the bottom; heads-up card rebuilt as a dark glass 9-patch |
@@ -62,7 +62,7 @@ Local package: `Siam Serenity.mtz` in this folder. Import through Theme Store �
 description.xml                 theme manifest (title, designer, modules)
 wallpaper/                      default_wallpaper.jpg · default_lock_wallpaper.jpg · default_lock_wallpaper2.jpg
 lockscreen/advance/             manifest.xml + main.xml (same MAML) + art/ (mist, glow, fronds, cards, wx/)
-icons/                          86 package-name PNGs, 512 × 512
+icons/                          87 package-name PNGs, 512 × 512
 clock_2x2 / 2x4 / 3x4 / 4x2     weather widget plates + wx/ glyphs
 com.android.contacts / mms / settings / systemui    dialer, bubbles, panels
 com.miui.home / framework-res   launcher and framework colour maps
@@ -72,8 +72,8 @@ preview/                        store preview frames
 ## Verification
 
 - 42 nine-patch assets scanned: 40 clean. `timing_button_n.9.png` and `timing_button_p.9.png` inherit a two-segment left marker from the source set — cosmetic, no effect on stretching.
-- Icon set: 86 PNGs, 512 × 512, 256-colour, average 13 KB after quantisation.
-- Package: 597 files, 8.9 MB (store limit 30 MB), previews included.
+- Icon set: 87 PNGs, 512 × 512, 256-colour, average 13 KB after quantisation.
+- Package: 598 files, 8.9 MB (store limit 30 MB), previews included.
 - Wallpapers: 1080 × 2400 JPEG, 0.5–0.8 MB each.
 
 ## Known limitations
@@ -90,4 +90,6 @@ preview/                        store preview frames
 3. Layered PSDs open in Photoshop / Affinity Photo; layer names run `01` upward.
 
 Design and assets by jvyiyv. For personal use and portfolio display; please do not resell or redistribute commercially.
+
+
 
