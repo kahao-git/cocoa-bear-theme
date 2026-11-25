@@ -10,9 +10,9 @@ Designer        jvyiyv
 --------------------
 Siam Serenity.mtz                8.91 MB   (limit 30 MB)
 Siam Serenity_Layered_PSD.zip   18.98 MB   4 layered PSDs
-Entries in .mtz package          598 files
+Entries in .mtz package          602 files
 XML manifests                    30
-PNG assets in project            559
+PNG assets in project            560
 Nine-patch assets                42
 
 Modules: com.android.contacts, com.android.mms, com.android.settings,
@@ -23,7 +23,7 @@ clock_4x2, icons, lockscreen, wallpaper.
 
 2. Icon set
 -----------
-87 package-name PNGs, 512 × 512 RGBA, 256-colour quantised
+91 package-name PNGs, 512 × 512 RGBA, 256-colour quantised
 Average size 13.2 KB, total 1.11 MB
 53 store-spec icons covered: 31 system, 10 overseas, 12 Google
 Shared plate: sunset coral -> amber -> turquoise gradient, 122°,
@@ -50,6 +50,21 @@ Dialog, popup and window backgrounds are intentionally restored to the system
 originals (miuix_appcompat_window_bg_light, settings window bg, search mask,
 new_message_popup_bg, alert_btn).
 
+
+4b. Popup / dialog surfaces (system default)
+--------------------------------------------
+113 colour keys were removed from the theme_values.xml of com.android.mms (25),
+com.android.settings (33), com.android.contacts (36), com.android.systemui (16)
+and com.miui.home (3). Any key naming popup, dialog, bottom_menu, dropdown,
+action_mode, snackbar or alert is no longer overridden, so MiuiX uses its own
+light surface with dark labels.
+Nine-patch dialog backgrounds stay on the untouched originals:
+miuix_appcompat_window_bg_light.9.png, new_message_popup_bg.9.png, alert_btn.9.png
+(mms), miuix_appcompat_settings_window_bg_light.9.png and
+miuix_appcompat_window_search_mask.9.png (settings).
+Where the popup is set: <module>/theme_values.xml - remove or add a key there to
+control any popup surface; the bitmap itself comes from the module's
+res/drawable-xxhdpi nine-patch.
 5. Lock screen
 --------------
 MAML scene in lockscreen/advance/manifest.xml (main.xml is the same file).
@@ -89,4 +104,6 @@ All JPEG q93, subsampling 4:2:2.
 - MAML verified structurally and by rendered preview, not on a physical device.
 - Circle elements fall back to a solid tint if a device ignores animated alpha.
 - Two timing_button nine-patches keep the inherited marker quirk (see 3).
+
+
 
