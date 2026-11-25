@@ -1,0 +1,109 @@
+Siam Serenity — verification record
+==================================
+
+Build date      2026-11-24
+Target          HyperOS 3 Global (resourceType=theme, uiVersion=17, editorVersion=2.0.8, miuiAdapterVersion=3.3)
+Canvas          1080 × 2400
+Designer        jvyiyv
+
+1. Package inventory
+--------------------
+Siam Serenity.mtz                8.91 MB   (limit 30 MB)
+Siam Serenity_Layered_PSD.zip   18.98 MB   4 layered PSDs
+Entries in .mtz package          602 files
+XML manifests                    30
+PNG assets in project            560
+Nine-patch assets                42
+
+Modules: com.android.contacts, com.android.mms, com.android.settings,
+com.android.systemui, com.miui.home, com.miui.fliphome,
+com.miui.notification, com.miui.securitycenter, miui.systemui.plugin,
+framework-res, framework-miui-res, clock_2x2, clock_2x4, clock_3x4,
+clock_4x2, icons, lockscreen, wallpaper.
+
+2. Icon set
+-----------
+91 package-name PNGs, 512 × 512 RGBA, 256-colour quantised
+Average size 13.2 KB, total 1.11 MB
+53 store-spec icons covered: 31 system, 10 overseas, 12 Google
+Shared plate: sunset coral -> amber -> turquoise gradient, 122°,
+cream inner stroke 6 px at 8 px inset, squircle radius 112
+
+3. Nine-patch scan
+------------------
+42 assets scanned, 40 clean.
+Flagged (inherited from the source asset set, not introduced here):
+  com.android.mms/res/drawable-xxhdpi/timing_button_n.9.png  left marker has 2 segments
+  com.android.mms/res/drawable-xxhdpi/timing_button_p.9.png  left marker has 2 segments
+Neither asset is visible in the shipped screens; stretching behaviour is unaffected
+outside the marker column.
+
+4. Colour pass
+--------------
+All theme_values.xml colour literals remapped from the previous palette to the
+Siam palette (28 RGB keys, alpha prefixes preserved). PNG assets duotone-mapped
+through a 7-stop emerald-to-cream LUT. Protected by design: icons, wallpapers,
+lock screen art, weather glyphs, widget plates, notification shade, heads-up card,
+SMS bubbles and composer.
+
+Dialog, popup and window backgrounds are intentionally restored to the system
+originals (miuix_appcompat_window_bg_light, settings window bg, search mask,
+new_message_popup_bg, alert_btn).
+
+
+4b. Popup / dialog surfaces (system default)
+--------------------------------------------
+113 colour keys were removed from the theme_values.xml of com.android.mms (25),
+com.android.settings (33), com.android.contacts (36), com.android.systemui (16)
+and com.miui.home (3). Any key naming popup, dialog, bottom_menu, dropdown,
+action_mode, snackbar or alert is no longer overridden, so MiuiX uses its own
+light surface with dark labels.
+Nine-patch dialog backgrounds stay on the untouched originals:
+miuix_appcompat_window_bg_light.9.png, new_message_popup_bg.9.png, alert_btn.9.png
+(mms), miuix_appcompat_settings_window_bg_light.9.png and
+miuix_appcompat_window_search_mask.9.png (settings).
+Where the popup is set: <module>/theme_values.xml - remove or add a key there to
+control any popup surface; the bitmap itself comes from the module's
+res/drawable-xxhdpi nine-patch.
+5. Lock screen
+--------------
+MAML scene in lockscreen/advance/manifest.xml (main.xml is the same file).
+Page 1: clock, English date, weather card, calendar card, torch, camera,
+swipe-up unlock, sideways hint.
+Page 2: day number, month, weekday, wordmark, swipe-right to return.
+Horizontal drag is live-tracked (#touch_x - #touch_begin_x - base), page snaps at
+96 px travel with a 70 px vertical guard.
+Weather data: content://weather/actualWeatherData/1
+Torch: miui.intent.action.TOGGLE_TORCH + Settings.Global refresh
+Camera: com.android.camera with ShowCameraWhenLocked / StartActivityWhenLocked
+Tap zones: weather (60-640, 1088-1340), calendar (660-1040, 1088-1340),
+torch (56-244, 2128-2300), camera (836-1024, 2128-2300), 46 px travel guard.
+Animated layers: glow (breathe + hour), mist A/B (drift), shimmer, sparks,
+fronds (gravity parallax), veil warm/cool (hour switch).
+
+6. Widgets
+----------
+clock_2x2 / 2x4 / 3x4 / 4x2 rewritten with English formats ('EEE, MMM d'),
+live weather binder, tappable plate -> com.miui.weather2.
+
+7. Previews
+-----------
+01-lockscreen.jpg 1080 × 2400
+01b-lockscreen-quiet.jpg 1080 × 2400
+02-home.jpg 1080 × 2400
+03-messages.jpg 1080 × 2400
+04-settings.jpg 1080 × 2400
+05-icons.jpg 1080 × 2400
+封面.jpg 1080 × 1440
+All JPEG q93, subsampling 4:2:2.
+
+8. Known limitations
+--------------------
+- .mtz is a plain zip (manifest + modules + preview/), unsigned; Theme Editor
+  export is unavailable on this workstation.
+- MAML verified structurally and by rendered preview, not on a physical device.
+- Circle elements fall back to a solid tint if a device ignores animated alpha.
+- Two timing_button nine-patches keep the inherited marker quirk (see 3).
+
+
+
