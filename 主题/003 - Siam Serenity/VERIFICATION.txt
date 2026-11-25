@@ -105,5 +105,13 @@ All JPEG q93, subsampling 4:2:2.
 - Circle elements fall back to a solid tint if a device ignores animated alpha.
 - Two timing_button nine-patches keep the inherited marker quirk (see 3).
 
-
+9. Touch routing fix (build r2)
+-------------------------------
+MAML conditions were normalised to the escaped operator form (`&amp;&amp;`, `&lt;=`,
+`&gt;=`). The earlier `**` spelling was read as two multiplications, so every
+condition evaluated to a positive number - i.e. always true - and one tap fired
+the torch, the camera, the weather app and the calendar together.
+Lock screen actions now launch by action=MAIN + category=LAUNCHER + package
+instead of a hard-coded Activity class, and the torch / camera zones scale with
+#screen_height so they stay on the bottom corners on any resolution.
 
